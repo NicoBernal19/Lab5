@@ -62,10 +62,35 @@ En este ejercicio, va a implementar una aplicación Web muy básica, haciendo us
 Para esto usaremos la documentación oficial de Spring con que que aprenderemos las funciones básicas de este framework https://spring.io/guides/gs/serving-web-content/
 
 Después de terminar el aprendizaje analice:
-- ¿Por qué MVC obtiene ese nombre? (puede apoyarse de https://www.javatpoint.com/spring-mvc-tutorial) 
+- ¿Por qué MVC obtiene ese nombre? (puede apoyarse de https://www.javatpoint.com/spring-mvc-tutorial)
+    - RESPUESTA: Recibe ese nombre debido a sus siglas. Cada sigla significa lo siguiente:
+        - M (Modelo): Designa la capa lógica de datos de la aplicación, encargada de gestionar el acceso y manipulación de la información para su procesamiento. Incluye elementos como bases de datos, archivos y servicios web.
+        - V (Vista): Encargada de la representación visual de la información, responsable de exhibir la interfaz y presentar los datos al usuario final de manera comprensible y atractiva.
+        - C (Controlador): Actúa como intermediario entre el Modelo y la Vista, gestionando las solicitudes del usuario. El Controlador interpreta las acciones del usuario y coordina las interacciones entre el Modelo y la Vista.
+   
 - ¿Cuáles son las ventajas de usar MVC?
+    - RESPUESTA:
+        - El patrón de diseño MVC descompone el código en tres partes distintas: Modelo, Vista y Controlador.
+        - Simplifica la reutilización y el mantenimiento del código fuente.
+        - Habilita la realización de pruebas de forma más directa y eficiente.
+        - Facilita la adaptación de la aplicación a medida que aumenta su complejidad.
+        - Optimiza la estructura, organización y facilidad de mantenimiento de las aplicaciones.
+        - Favorece una disposición estructurada y modular en el desarrollo del proyecto.
+        - Simplifica el flujo de trabajo y fomenta prácticas de programación sólidas y eficaces.
 - ¿Qué diferencia tiene la estructura de directorios de este proyecto comparado con las de proyectos pasados (con solo maven y java EE)?
+    - RESPUESTA:
+        - Las variaciones se originan por la incorporación de nuevas funciones, la reestructuración del código existente, la eliminación de código desactualizado o la optimización del código para mejorar su calidad y mantenibilidad.
+        - La utilización de un marco web específico, como Spring MVC.
+        - La carpeta src/main/resources/static se emplea para alojar los recursos estáticos de la aplicación web.
+        - La falta de directorios concretos de Java EE.
+        - La configuración suplementaria de Spring, como application.properties.
 - ¿Qué anotaciones usaste y cuál es la diferencia entre ellas?
+    - RESPUESTA:
+        - @GetMapping("/greeting"): Asocia las solicitudes HTTP GET a métodos particulares dentro de un controlador.
+        - @ResponseBody: Indica que el valor devuelto por un método de controlador debe ser vinculado directamente al cuerpo de la respuesta HTTP, en lugar de ser vinculado a una vista. Es útil cuando se desea retornar datos en formato JSON o XML directamente desde un          controlador.
+        - @Controller: Se emplea para identificar una clase como un controlador en Spring MVC. Los controladores manejan las peticiones HTTP y retornan las respuestas correspondientes.
+        - @RequestMapping("/User/{id}"): Esta anotación se utiliza para asignar solicitudes HTTP a métodos específicos del controlador y permite el uso de variables de ruta, como {id} en este caso, que serán pasadas como parámetros al método del controlador.
+        - @SpringBootApplication: Esta etiqueta se utiliza para marcar la clase principal de una aplicación Spring Boot. Combina tres anotaciones: @Configuration, @EnableAutoConfiguration y @ComponentScan. Indica que la clase es una clase de configuración, habilita la          configuración automática de Spring Boot basada en el contenido del classpath y escanea los paquetes en busca de componentes de Spring.
 - Ahora, haz el request GET http://localhost:8080/greeting usando Postman, y revisa si el body de la respuesta es igual a alguno de los archivos del proyecto. Significa eso que es un recurso web dinámico o estático?
 
 ### PARTE IV. - APLICACIÓN MVC PARA CONSUMO DE SERVICIO RESTful
@@ -74,6 +99,8 @@ https://jsonplaceholder.typicode.com/todos/1, puede guiarse de tutoriales como h
 
 Luego de terminada esta parte responda:
 - ¿Qué es RESTful?
+    - RESPUESTA:
+        - RESTful (Representational State Transfer) es un paradigma arquitectónico que impulsa la creación de APIs web para sistemas distribuidos. Se basa en estándares y protocolos web como HTTP y se centra en la manipulación de recursos identificados mediante URLs,           utilizando métodos HTTP estándar como pueden ser GET, POST, DELETE, PUT. Este enfoque facilita una comunicación coherente y eficiente entre sistemas al seguir un conjunto común de prácticas para la manipulación de recursos a través de la web.
 - Si utilizo un framework como [Boostrap CSS](https://getbootstrap.com/) para qué el apartado gráfico se vea más profesional, ¿en qué capa se haría su uso?
 
 ### PARTE V. - APLICACIÓN MVC JUEGO
@@ -88,7 +115,11 @@ se reduce en $10.000, como en los juegos de apuesta, es natural qué quede en sa
 
 Analice las siguientes situaciones:
 - ¿Qué pasa si abro el sitio de juegos en dos navegadores difententes?
+    - RESPUESTA:
+        - Si ingresamos al sitio de juegos desde dos navegadores distintos, cada uno creará una sesión única con el servidor. En consecuencia, cada sesión manejará su propio juego, con su propio número secreto por adivinar y su saldo exclusivo. De esta manera, los              juegos en ambos navegadores se desarrollarán completamente de forma independiente entre sí.
 - Si quisiera qué a cada jugador le aparecieran independientemente sus respectivos saldos. ¿Qué habría que hacer?
+    - RESPUESTA:
+        - Si queremos garantizar que cada jugador tenga acceso exclusivo a sus saldos, podemos emplear la funcionalidad de sesión de Flask para almacenar los números a adivinar y los saldos de cada usuario de manera separada. Esto implica que la gestión de la sesión en         Flask se lleva a cabo de manera individual para cada usuario, lo que conlleva que cada jugador tenga su propio saldo y progreso en el juego, sin que las acciones de otros jugadores en el mismo sitio web tengan ningún impacto en ellos.
 
 ## ENTREGA
 - En un README.md colocar lo siguiente:
