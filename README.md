@@ -63,6 +63,8 @@ La siguiente misión es ejecutar una aplicación react localmente:
 
 Ahora, haz el request GET http://localhost:3000/ usando Postman, y revisa si el body de la respuesta es igual a alguno de los archivos del proyecto. Significa eso que es un recurso web dinámico o estático?
 
+RESPUESTA: El body de la respuesta si es igual a uno de los archivos del proyecto(index.html). Esto significa que el recurso es estático. Un recurso web estático se refiere a archivos que son servidos directamente por el servidor web sin ningún procesamiento adicional. Como la respuesta coincide con uno de los archivos del proyecto, esto indica que el servidor está devolviendo un archivo existente en el sistema de archivos, sin procesamiento dinámico adicional, por lo que el recurso es estatico.
+
 ### PARTE III. - HACIENDO UNA APLICACIÓN WEB DINÁMICA USANDO EL PATRÓN MVC
 En este ejercicio, va a implementar una aplicación Web muy básica, haciendo uso de spring MVC.
 
