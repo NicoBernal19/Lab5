@@ -17,9 +17,16 @@ Ahora has otro request GET al recurso https://dummyjson.com/todos, nuevamente ve
 
 Responde las siguientes preguntas:
 - ¿Qué pasa si no envío el método correcto?
+    - RESPUESTA: Si no envías el método correcto en tu solicitud HTTP, el servidor responderá con un código de estado HTTP 405 (Método no permitido). Esto indica que el método utilizado en la solicitud no está permitido para la URL solicitada.
 - ¿Qué pasa si al body response HTML lo fuerzo a leerse como JSON?
+    - RESPUESTA: Si intentas leer el cuerpo de la respuesta HTML como JSON, es probable que encuentres errores de análisis debido a que el contenido no sigue el formato JSON. Esto puede generar una excepción en tu aplicación o código que intenta procesar el JSON, ya        que el HTML no está estructurado de la misma manera que el JSON.
 - ¿Por qué el preview de HTML no se ve igual a cuando accedo a la URL en un navegador web?
+    - RESPUESTA: El preview de HTML puede no verse igual que en un navegador web por varias razones:
+        - La herramienta de preview puede no interpretar correctamente el HTML, CSS y JavaScript de la misma manera que lo hace un navegador web.
+        - Algunas partes del HTML pueden depender de recursos externos (archivos CSS, imágenes, JavaScript, etc.) que no se cargan o procesan correctamente en el preview.
+        - La herramienta de preview puede no soportar ciertas características del HTML, como elementos HTML5 o CSS3, lo que puede afectar la apariencia y funcionalidad del contenido.
 - ¿Qué pasa si le envías un body a una solicitud GET?
+    - RESPUESTA: Según las especificaciones de HTTP, no se debe enviar un cuerpo en una solicitud GET. Sin embargo, algunos servidores pueden aceptar un cuerpo en una solicitud GET, pero en la práctica, muchos servidores lo ignorarán o responderán con un error (como un     HTTP 400 Bad Request). En general, es una mala práctica enviar un cuerpo en una solicitud GET, ya que este método está diseñado para recuperar recursos, no para enviar datos al servidor.
 
 Como parte del laboratorio en casa has los dos request anteriores pero ahora usando la herramienta Telnet, ya que esta no funciona adecuadamente en los equipos del laboratorio.
 
