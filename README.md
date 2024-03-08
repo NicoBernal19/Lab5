@@ -34,7 +34,7 @@ Responde las siguientes preguntas:
         - Algunas partes del HTML pueden depender de recursos externos (archivos CSS, imágenes, JavaScript, etc.) que no se cargan o procesan correctamente en el preview.
         - La herramienta de preview puede no soportar ciertas características del HTML, como elementos HTML5 o CSS3, lo que puede afectar la apariencia y funcionalidad del contenido.
 - ¿Qué pasa si le envías un body a una solicitud GET?
-    - RESPUESTA: Según las especificaciones de HTTP, no se debe enviar un cuerpo en una solicitud GET. Sin embargo, algunos servidores pueden aceptar un cuerpo en una solicitud GET, pero en la práctica, muchos servidores     lo ignorarán o responderán con un error (como un     HTTP 400 Bad Request). En general, es una mala práctica enviar un cuerpo en una solicitud GET, ya que este método está diseñado para recuperar recursos, no para        enviar datos al servidor.
+    - RESPUESTA: Según las especificaciones de HTTP, no se debe enviar un cuerpo en una solicitud GET. Sin embargo, algunos servidores pueden aceptar un cuerpo en una solicitud GET, pero en la práctica, muchos servidores lo ignorarán o responderán con un error (como un     HTTP 400 Bad Request). En general, es una mala práctica enviar un cuerpo en una solicitud GET, ya que este método está diseñado para recuperar recursos, no para enviar datos al servidor.
 
 Como parte del laboratorio en casa has los dos request anteriores pero ahora usando la herramienta Telnet, ya que esta no funciona adecuadamente en los equipos del laboratorio.
 
@@ -120,9 +120,9 @@ Y lo siguiente son las imagenes de los resultados de la aplicacion hecha, con la
 Después de terminar el aprendizaje analice:
 - ¿Por qué MVC obtiene ese nombre? (puede apoyarse de https://www.javatpoint.com/spring-mvc-tutorial)
     - RESPUESTA: Recibe ese nombre debido a sus siglas. Cada sigla significa lo siguiente:
-        - M (Modelo): Designa la capa lógica de datos de la aplicación, encargada de gestionar el acceso y manipulación de la información para su procesamiento. Incluye elementos como bases de datos, archivos y servicios         web.
+        - M (Modelo): Designa la capa lógica de datos de la aplicación, encargada de gestionar el acceso y manipulación de la información para su procesamiento. Incluye elementos como bases de datos, archivos y servicios web.
         - V (Vista): Encargada de la representación visual de la información, responsable de exhibir la interfaz y presentar los datos al usuario final de manera comprensible y atractiva.
-        - C (Controlador): Actúa como intermediario entre el Modelo y la Vista, gestionando las solicitudes del usuario. El Controlador interpreta las acciones del usuario y coordina las interacciones entre el Modelo y           la Vista.
+        - C (Controlador): Actúa como intermediario entre el Modelo y la Vista, gestionando las solicitudes del usuario. El Controlador interpreta las acciones del usuario y coordina las interacciones entre el Modelo y la Vista.
 - ¿Cuáles son las ventajas de usar MVC?
     - RESPUESTA:
         - El patrón de diseño MVC descompone el código en tres partes distintas: Modelo, Vista y Controlador.
@@ -142,11 +142,15 @@ Después de terminar el aprendizaje analice:
 - ¿Qué anotaciones usaste y cuál es la diferencia entre ellas?
     - RESPUESTA:
         - @GetMapping("/greeting"): Asocia las solicitudes HTTP GET a métodos particulares dentro de un controlador.
-        - @ResponseBody: Indica que el valor devuelto por un método de controlador debe ser vinculado directamente al cuerpo de la respuesta HTTP, en lugar de ser vinculado a una vista. Es útil cuando se desea retornar           datos en formato JSON o XML directamente desde un          controlador.
+        - @ResponseBody: Indica que el valor devuelto por un método de controlador debe ser vinculado directamente al cuerpo de la respuesta HTTP, en lugar de ser vinculado a una vista. Es útil cuando se desea retornar datos en formato JSON o XML directamente desde un          controlador.
         - @Controller: Se emplea para identificar una clase como un controlador en Spring MVC. Los controladores manejan las peticiones HTTP y retornan las respuestas correspondientes.
-        - @RequestMapping("/User/{id}"): Esta anotación se utiliza para asignar solicitudes HTTP a métodos específicos del controlador y permite el uso de variables de ruta, como {id} en este caso, que serán pasadas como         parámetros al método del controlador.
-        - @SpringBootApplication: Esta etiqueta se utiliza para marcar la clase principal de una aplicación Spring Boot. Combina tres anotaciones: @Configuration, @EnableAutoConfiguration y @ComponentScan. Indica que la          clase es una clase de configuración, habilita la          configuración automática de Spring Boot basada en el contenido del classpath y escanea los paquetes en busca de componentes de Spring.
+        - @RequestMapping("/User/{id}"): Esta anotación se utiliza para asignar solicitudes HTTP a métodos específicos del controlador y permite el uso de variables de ruta, como {id} en este caso, que serán pasadas como parámetros al método del controlador.
+        - @SpringBootApplication: Esta etiqueta se utiliza para marcar la clase principal de una aplicación Spring Boot. Combina tres anotaciones: @Configuration, @EnableAutoConfiguration y @ComponentScan. Indica que la clase es una clase de configuración, habilita la          configuración automática de Spring Boot basada en el contenido del classpath y escanea los paquetes en busca de componentes de Spring.
 - Ahora, haz el request GET http://localhost:8080/greeting usando Postman, y revisa si el body de la respuesta es igual a alguno de los archivos del proyecto. Significa eso que es un recurso web dinámico o estático?
+
+![imagen](img/25.jpg)
+
+RESPUESTA: El body de la respuesta no es igual a ninguno de los archivos del proyecto. Esto significa que el recurso es dinamico. Un recurso web estático se refiere a archivos que son servidos directamente por el servidor web sin ningún procesamiento adicional. Como la respuesta no coincide con uno de los archivos del proyecto, esto indica que el servidor no está devolviendo un archivo existente en el sistema de archivos, por lo que el recurso es dinamico.
 
 ### PARTE IV. - APLICACIÓN MVC PARA CONSUMO DE SERVICIO RESTful
 Usando la arquitectura MVC del punto anterior (el proyecto anterior), realice una aplicación simple qué permita navegar gráficamente sobre esta API
