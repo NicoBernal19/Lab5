@@ -13,7 +13,15 @@ Abre la aplicación Postman, lo usaremos para hacer una solicitud a un servidor 
 
 Has un request GET a la URL https://www.escuelaing.edu.co/es/ y verifica el body de respuesta en las opciones Pretty, Raw, Preview.
 
+![imagen](img/1.jpg)
+![imagen](img/2.jpg)
+![imagen](img/3.jpg)
+
 Ahora has otro request GET al recurso https://dummyjson.com/todos, nuevamente verifica el body en varias opciones.
+
+![imagen](img/4.jpg)
+![imagen](img/5.jpg)
+![imagen](img/6.jpg)
 
 Responde las siguientes preguntas:
 - ¿Qué pasa si no envío el método correcto?
@@ -26,7 +34,7 @@ Responde las siguientes preguntas:
         - Algunas partes del HTML pueden depender de recursos externos (archivos CSS, imágenes, JavaScript, etc.) que no se cargan o procesan correctamente en el preview.
         - La herramienta de preview puede no soportar ciertas características del HTML, como elementos HTML5 o CSS3, lo que puede afectar la apariencia y funcionalidad del contenido.
 - ¿Qué pasa si le envías un body a una solicitud GET?
-    - RESPUESTA: Según las especificaciones de HTTP, no se debe enviar un cuerpo en una solicitud GET. Sin embargo, algunos servidores pueden aceptar un cuerpo en una solicitud GET, pero en la práctica, muchos servidores lo ignorarán o responderán con un error (como un     HTTP 400 Bad Request). En general, es una mala práctica enviar un cuerpo en una solicitud GET, ya que este método está diseñado para recuperar recursos, no para enviar datos al servidor.
+    - RESPUESTA: Según las especificaciones de HTTP, no se debe enviar un cuerpo en una solicitud GET. Sin embargo, algunos servidores pueden aceptar un cuerpo en una solicitud GET, pero en la práctica, muchos servidores     lo ignorarán o responderán con un error (como un     HTTP 400 Bad Request). En general, es una mala práctica enviar un cuerpo en una solicitud GET, ya que este método está diseñado para recuperar recursos, no para        enviar datos al servidor.
 
 Como parte del laboratorio en casa has los dos request anteriores pero ahora usando la herramienta Telnet, ya que esta no funciona adecuadamente en los equipos del laboratorio.
 
@@ -38,6 +46,14 @@ Verificando en terminal sería `$ npm init`
 
 La siguiente misión es ejecutar una aplicación react localmente:
 - Abre la aplicación https://codesandbox.io/s/react-js-simple-calculator-pefmr, loguéate con GitHub y juega cambiando los parámetros como colores y duplicando las líneas del archivo App.js con tags como `<ResultComponent ...>` en la función render.
+
+![imagen](img/7.jpg)
+
+![imagen](img/8.jpg)
+
+![imagen](img/9.jpg)
+
+![imagen](img/10.jpg)
 
 - ¿Qué hace cada uno de los archivos en la aplicación?
 .
@@ -56,12 +72,25 @@ La siguiente misión es ejecutar una aplicación react localmente:
 1) Descargar código en un Zip
 2) Descomprimir el Zip en la carpeta de proyectos de software, (en ciertos PC solo funciona 7-Zip)
 3) Abrir una terminal de Git Bash en la carpeta descomprimida
+
+![imagen](img/11.jpg)
+
 4) Instalar las dependencias con `npm install`
+
+![imagen](img/12.jpg)
+
 5) Iniciar la aplicación con `npm star`, en algunos computadores con versiones antiguas de nodejs hay que agregar `NODE_OPTIONS=--openssl-legacy-provider npm run start`
+
+![imagen](img/13.jpg)
+
 6) Si te sale el Firewall dale click en cancelar
 7) Abrir la ruta http://localhost:3000/ en un navegador web como Firefox o Google Chrome
 
+![imagen](img/14.jpg)
+
 Ahora, haz el request GET http://localhost:3000/ usando Postman, y revisa si el body de la respuesta es igual a alguno de los archivos del proyecto. Significa eso que es un recurso web dinámico o estático?
+
+![imagen](img/15.jpg)
 
 RESPUESTA: El body de la respuesta si es igual a uno de los archivos del proyecto(index.html). Esto significa que el recurso es estático. Un recurso web estático se refiere a archivos que son servidos directamente por el servidor web sin ningún procesamiento adicional. Como la respuesta coincide con uno de los archivos del proyecto, esto indica que el servidor está devolviendo un archivo existente en el sistema de archivos, sin procesamiento dinámico adicional, por lo que el recurso es estatico.
 
@@ -70,13 +99,30 @@ En este ejercicio, va a implementar una aplicación Web muy básica, haciendo us
 
 Para esto usaremos la documentación oficial de Spring con que que aprenderemos las funciones básicas de este framework https://spring.io/guides/gs/serving-web-content/
 
+Lo siguiente son las imagenes del codigo que inclui para el desarrollo del ejercicio y su ejecucion por Git Bash:
+
+![imagen](img/16.jpg)
+![imagen](img/17.jpg)
+![imagen](img/18.jpg)
+![imagen](img/19.jpg)
+![imagen](img/20.jpg)
+
+Y lo siguiente son las imagenes de los resultados de la aplicacion hecha, con la adicion de un archivo de codigo mas:
+
+![imagen](img/21.jpg)
+
+![imagen](img/22.jpg)
+
+![imagen](img/23.jpg)
+
+![imagen](img/24.jpg)
+
 Después de terminar el aprendizaje analice:
 - ¿Por qué MVC obtiene ese nombre? (puede apoyarse de https://www.javatpoint.com/spring-mvc-tutorial)
     - RESPUESTA: Recibe ese nombre debido a sus siglas. Cada sigla significa lo siguiente:
-        - M (Modelo): Designa la capa lógica de datos de la aplicación, encargada de gestionar el acceso y manipulación de la información para su procesamiento. Incluye elementos como bases de datos, archivos y servicios web.
+        - M (Modelo): Designa la capa lógica de datos de la aplicación, encargada de gestionar el acceso y manipulación de la información para su procesamiento. Incluye elementos como bases de datos, archivos y servicios         web.
         - V (Vista): Encargada de la representación visual de la información, responsable de exhibir la interfaz y presentar los datos al usuario final de manera comprensible y atractiva.
-        - C (Controlador): Actúa como intermediario entre el Modelo y la Vista, gestionando las solicitudes del usuario. El Controlador interpreta las acciones del usuario y coordina las interacciones entre el Modelo y la Vista.
-   
+        - C (Controlador): Actúa como intermediario entre el Modelo y la Vista, gestionando las solicitudes del usuario. El Controlador interpreta las acciones del usuario y coordina las interacciones entre el Modelo y           la Vista.
 - ¿Cuáles son las ventajas de usar MVC?
     - RESPUESTA:
         - El patrón de diseño MVC descompone el código en tres partes distintas: Modelo, Vista y Controlador.
@@ -96,10 +142,10 @@ Después de terminar el aprendizaje analice:
 - ¿Qué anotaciones usaste y cuál es la diferencia entre ellas?
     - RESPUESTA:
         - @GetMapping("/greeting"): Asocia las solicitudes HTTP GET a métodos particulares dentro de un controlador.
-        - @ResponseBody: Indica que el valor devuelto por un método de controlador debe ser vinculado directamente al cuerpo de la respuesta HTTP, en lugar de ser vinculado a una vista. Es útil cuando se desea retornar datos en formato JSON o XML directamente desde un          controlador.
+        - @ResponseBody: Indica que el valor devuelto por un método de controlador debe ser vinculado directamente al cuerpo de la respuesta HTTP, en lugar de ser vinculado a una vista. Es útil cuando se desea retornar           datos en formato JSON o XML directamente desde un          controlador.
         - @Controller: Se emplea para identificar una clase como un controlador en Spring MVC. Los controladores manejan las peticiones HTTP y retornan las respuestas correspondientes.
-        - @RequestMapping("/User/{id}"): Esta anotación se utiliza para asignar solicitudes HTTP a métodos específicos del controlador y permite el uso de variables de ruta, como {id} en este caso, que serán pasadas como parámetros al método del controlador.
-        - @SpringBootApplication: Esta etiqueta se utiliza para marcar la clase principal de una aplicación Spring Boot. Combina tres anotaciones: @Configuration, @EnableAutoConfiguration y @ComponentScan. Indica que la clase es una clase de configuración, habilita la          configuración automática de Spring Boot basada en el contenido del classpath y escanea los paquetes en busca de componentes de Spring.
+        - @RequestMapping("/User/{id}"): Esta anotación se utiliza para asignar solicitudes HTTP a métodos específicos del controlador y permite el uso de variables de ruta, como {id} en este caso, que serán pasadas como         parámetros al método del controlador.
+        - @SpringBootApplication: Esta etiqueta se utiliza para marcar la clase principal de una aplicación Spring Boot. Combina tres anotaciones: @Configuration, @EnableAutoConfiguration y @ComponentScan. Indica que la          clase es una clase de configuración, habilita la          configuración automática de Spring Boot basada en el contenido del classpath y escanea los paquetes en busca de componentes de Spring.
 - Ahora, haz el request GET http://localhost:8080/greeting usando Postman, y revisa si el body de la respuesta es igual a alguno de los archivos del proyecto. Significa eso que es un recurso web dinámico o estático?
 
 ### PARTE IV. - APLICACIÓN MVC PARA CONSUMO DE SERVICIO RESTful
