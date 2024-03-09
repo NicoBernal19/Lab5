@@ -68,6 +68,17 @@ La siguiente misión es ejecutar una aplicación react localmente:
     ├── index.js
     └── styles.css
 
+- El archivo package.json es un archivo de configuración de npm que incluye detalles sobre el proyecto y sus dependencias, así como scripts de ejecución, entre otros elementos.
+- La carpeta public contiene archivos estáticos que se servirán directamente al navegador.
+    - index.html es la página principal de la aplicación web.
+- Dentro de la carpeta src se encuentra el código fuente de la aplicación.
+    - App.js es el componente principal utilizado para estructurar y renderizar otros componentes.
+    - En la carpeta components se encuentran componentes reutilizables de la aplicación.
+        - KeyPadComponent.js representa un teclado o panel de botones de la calculadora.
+        - ResultComponent.js muestra el resultado de la operación o cálculo requerida.
+    - El archivo index.js es el archivo utilizado para renderizar la aplicación en el DOM.
+    - styles.css es un archivo de hoja de estilos que contiene los estilos CSS para la aplicación.
+
 - Después de haber visto los cambios, vuelve a abrir la URL original https://codesandbox.io/s/react-js-simple-calculator-pefmr y sigue los siguientes pasos:
 1) Descargar código en un Zip
 2) Descomprimir el Zip en la carpeta de proyectos de software, (en ciertos PC solo funciona 7-Zip)
