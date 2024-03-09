@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Game page</title>
+</head>
+<body>
+<h1>Guess Game</h1>
+<p>Prize: <span th:text="${Prize}"></span></p>
+<p>Attempts: <span th:text="${Attempts}"></span></p>
+<p th:if="${Exception}" th:text="${Exception}"></p>
+<form action="#" th:action="@{/makeGuess}" method="post">
+    <label for="Number">Try</label>
+    <input type="text" id="Number" name="Number">
+    <input type="submit" value="Guess">
+</form>
+<form action="#" th:action="@{/reset}" method="post">
+    <input type="submit" value="Reset">
+</form>
+</body>
+</html>

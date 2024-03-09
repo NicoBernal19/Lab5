@@ -32,7 +32,6 @@ dependency-reduced-pom.xml
 README.html
 
 .github/
-test/
-LICENSE.writing
+LICENSE.writing.txt
 CONTRIBUTING.adoc
 LICENSE.txt
