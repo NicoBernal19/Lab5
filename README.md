@@ -239,7 +239,7 @@ Analice las siguientes situaciones:
         - Si ingresamos al sitio de juegos desde dos navegadores distintos, cada uno creará una sesión única con el servidor. En consecuencia, cada sesión manejará su propio juego, con su propio número secreto por adivinar y su saldo exclusivo. De esta manera, los              juegos en ambos navegadores se desarrollarán completamente de forma independiente entre sí.
 - Si quisiera qué a cada jugador le aparecieran independientemente sus respectivos saldos. ¿Qué habría que hacer?
     - RESPUESTA:
-        - Si queremos garantizar que cada jugador tenga acceso exclusivo a sus saldos, podemos emplear la funcionalidad de sesión de Flask para almacenar los números a adivinar y los saldos de cada usuario de manera separada. Esto implica que la gestión de la sesión en         Flask se lleva a cabo de manera individual para cada usuario, lo que conlleva que cada jugador tenga su propio saldo y progreso en el juego, sin que las acciones de otros jugadores en el mismo sitio web tengan ningún impacto en ellos.
+        - Si deseamos que cada jugador tenga su propio saldo independiente, tendriamos que implementar un sistema de gestión de sesiones. Asignariamos una sesión única a cada jugador cuando ingresen al sitio, luego tendriamos que mantener la información específica de           cada jugador con su sesion. Asi, cada jugador tendría su propio saldo, sin importar si muchas personas estan jugando en el sitio de forma simultanea.
 
 ## ENTREGA
 - En un README.md colocar lo siguiente:
