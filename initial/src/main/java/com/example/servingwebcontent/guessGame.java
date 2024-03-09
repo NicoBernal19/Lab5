@@ -6,6 +6,11 @@ public class guessGame {
     private int number;
     private boolean win;
 
+    public guessGame() {
+        prize = 100000;
+        attempts= 0;
+        number = generateRandomN();
+    }
     public int getPrize() {
         return prize;
     }
@@ -24,12 +29,6 @@ public class guessGame {
 
     public boolean getWin() {
         return win;
-    }
-
-    public guessGame() {
-        prize = 100000;
-        attempts= 0;
-        number = generateRandomN();
     }
 
     private int generateRandomN(){

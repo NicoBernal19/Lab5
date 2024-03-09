@@ -30,3 +30,9 @@ dependency-reduced-pom.xml
 *.idea
 
 README.html
+
+.github/
+test/
+LICENSE.writing
+CONTRIBUTING.adoc
+LICENSE.txt
