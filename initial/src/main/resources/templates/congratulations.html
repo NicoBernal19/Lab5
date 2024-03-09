@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Congratulations</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<b><p th:text="|Congratulations, you won! Your final prize is ${Prize}|"></b>
+<form action="#" th:action="@{/reset}" method="post">
+    <input type="submit" value="Reset">
+</form>
+</body>
+</html>
