@@ -38,6 +38,18 @@ Responde las siguientes preguntas:
 
 Como parte del laboratorio en casa has los dos request anteriores pero ahora usando la herramienta Telnet, ya que esta no funciona adecuadamente en los equipos del laboratorio.
 
+![imagen](img/40.jpg)
+
+![imagen](img/41.jpg)
+
+![imagen](img/42.jpg)
+
+![imagen](img/43.jpg)
+
+![imagen](img/44.jpg)
+
+![imagen](img/45.jpg)
+
 ### PARTE II. - CLIENT SIDE RENDERING CON REACT
 Para iniciar verifica que tengas alguna de estas herramientas:
 - NPM o YARN
