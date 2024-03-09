@@ -156,6 +156,24 @@ RESPUESTA: El body de la respuesta no es igual a ninguno de los archivos del pro
 Usando la arquitectura MVC del punto anterior (el proyecto anterior), realice una aplicación simple qué permita navegar gráficamente sobre esta API
 https://jsonplaceholder.typicode.com/todos/1, puede guiarse de tutoriales como https://medium.com/@nutanbhogendrasharma/consume-rest-api-in-spring-boot-web-application-354c404850f0
 
+Lo siguiente son las imagenes del codigo que inclui para el desarrollo del ejercicio y su ejecucion por Git Bash:
+
+![imagen](img/26.jpg)
+
+![imagen](img/27.jpg)
+
+![imagen](img/28.jpg)
+
+![imagen](img/29.jpg)
+
+![imagen](img/30.jpg)
+
+![imagen](img/31.jpg)
+
+Y este fue el resultado:
+
+![imagen](img/32.jpg)
+
 Luego de terminada esta parte responda:
 - ¿Qué es RESTful?
     - RESPUESTA:
@@ -171,6 +189,24 @@ se reduce en $10.000, como en los juegos de apuesta, es natural qué quede en sa
 2. El número a adivinar debe ser generado en cada intento y comparado con el número qué el usuario está insertando, es un número de 1 a 10.
 3. Debe existir un botón de reset, qué permita al jugador iniciar de nuevo.
 4. La capa de controlador debe procer el número del usuario mediante método `POST`.
+
+Lo siguiente son las imagenes del codigo que inclui para el desarrollo del ejercicio y su ejecucion por Git Bash:
+
+![imagen](img/33.jpg)
+
+![imagen](img/34.jpg)
+
+![imagen](img/35.jpg)
+
+![imagen](img/36.jpg)
+
+![imagen](img/37.jpg)
+
+Y este fue el resultado:
+
+![imagen](img/38.jpg)
+
+![imagen](img/39.jpg)
 
 Analice las siguientes situaciones:
 - ¿Qué pasa si abro el sitio de juegos en dos navegadores difententes?
